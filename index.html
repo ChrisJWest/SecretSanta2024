@@ -7,15 +7,23 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <audio id="backgroundMusic" autoplay loop>
+    <source src="csong.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
   <div class="container">
     <h1>Secret Santa Name Picker</h1>
     <p>Enter your name to find out who you're buying a gift for!</p>
     <input type="text" id="nameInput" placeholder="Enter your name">
     <button id="revealButton">Reveal</button>
+    <button id="toggleMusic">Pause Music</button>
     <p id="result"></p>
+
     <!-- Store the obfuscated data -->
     <div id="data" data-assignments="eyJBbGljZSI6ICJCb2IiLCJCb2IiOiAiQ2hhcmxpZSIsIkNoYXJsaWUiOiAiRGlhbmEiLCJEaWFuYSI6ICJFdmUiLCJFdmUiOiAiRnJhbmsiLCJGcmFuayI6ICJBbGljZSJ9"></div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
