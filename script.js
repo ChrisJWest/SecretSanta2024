@@ -10,7 +10,7 @@ const encodedData = document.getElementById("data").dataset.assignments;
 // Decode the assignments
 const assignments = decodeAssignments(encodedData);
 
-// Handle button click
+// Handle button click for revealing the Secret Santa
 document.getElementById("revealButton").addEventListener("click", () => {
   const nameInput = document.getElementById("nameInput").value.trim();
   const result = document.getElementById("result");
@@ -20,5 +20,19 @@ document.getElementById("revealButton").addEventListener("click", () => {
     result.textContent = `Hi ${nameInput}, you are buying a gift for ${secretSanta}! 🎁`;
   } else {
     result.textContent = "Name not found! Please try again.";
+  }
+});
+
+// Handle music toggle
+const music = document.getElementById("backgroundMusic");
+const musicButton = document.getElementById("toggleMusic");
+
+musicButton.addEventListener("click", () => {
+  if (music.paused) {
+    music.play();
+    musicButton.textContent = "Pause Music";
+  } else {
+    music.pause();
+    musicButton.textContent = "Play Music";
   }
 });
