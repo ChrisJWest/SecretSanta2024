@@ -23,8 +23,15 @@ document.getElementById("revealButton").addEventListener("click", () => {
   }
 });
 
-// Handle music toggle
+// Handle music autoplay
 const music = document.getElementById("backgroundMusic");
+
+// Ensure music is unmuted after the page loads
+window.addEventListener("load", () => {
+  music.muted = false; // Unmute the audio after the page loads
+});
+
+// Handle music toggle for play/pause
 const musicButton = document.getElementById("toggleMusic");
 
 musicButton.addEventListener("click", () => {
@@ -36,3 +43,4 @@ musicButton.addEventListener("click", () => {
     musicButton.textContent = "Play Music";
   }
 });
+
