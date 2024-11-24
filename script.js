@@ -37,10 +37,10 @@ const musicButton = document.getElementById("toggleMusic");
 musicButton.addEventListener("click", () => {
   if (music.paused) {
     music.play();
-    musicButton.textContent = "Pause Music";
+    musicButton.textContent = "Play/Pause Music";
   } else {
     music.pause();
-    musicButton.textContent = "Play Music";
+    musicButton.textContent = "Play/Pause Music";
   }
 });
 
