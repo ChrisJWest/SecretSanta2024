@@ -13,13 +13,14 @@ const assignments = decodeAssignments(encodedData);
 // Handle button click for revealing the Secret Santa
 document.getElementById("revealButton").addEventListener("click", () => {
   const nameInput = document.getElementById("nameInput").value.trim();
-  const firstName = nameInput.split("_")[0];
+  //const firstName = nameInput.split("_")[0];
+  //const firstName =
   const result = document.getElementById("result");
 
   if (assignments[nameInput]) {
     const secretSanta = assignments[nameInput];
-    const firstNameSanta = secretSanta.split("_")[0];
-    result.textContent = `Hi ${firstName}, you are buying a gift for ${firstNameSanta}! 🎁`;
+    //const firstNameSanta = secretSanta.split("_")[0];
+    result.textContent = `Hi ${nameInput}, you are buying a gift for ${secretSanta}! 🎁`;
   } else {
     result.textContent = "Name not found! Please try again.";
   }
